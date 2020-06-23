@@ -1,30 +1,25 @@
 //@ts-check
 import React from "react";
 import { connect } from "react-redux";
-import useStyles from "../components/useStyles";
-const arr = [];
-arr.length = 1000;
-arr.fill("Hello kitty");
+import Home from "./../screens/Home";
+import Add from "./../screens/Add";
+import Settings from "./../screens/Settings";
+import Stats from "./../screens/Stats";
+import Workout from "./../screens/Workout";
+
 const Browser = (props) => {
-  const classes = useStyles();
-  return (
-    <main className={classes.browser}>
-      <div>This is the top</div>
-      {arr.map((a, idx) => (
-        <div key={idx}>{a}</div>
-      ))}
-      <div>This is browser</div>
-    </main>
-  );
+  const { screen } = props;
+  if (screen === "add") return <Add />;
+  if (screen === "settings") return <Settings />;
+  if (screen === "stats") return <Stats />;
+  if (screen === "workout") return <Workout />;
+  else return <Home />;
 };
 
 const mapStateToProps = (state) => ({
-  // state
+  screen: state.screen,
 });
 
-/**
- * @param {any} dispatch
- */
 const mapDispatchToProps = (dispatch) => ({
   // props
 });

@@ -38,4 +38,28 @@ export default makeStyles((theme) => ({
     marginBottom: 32,
     flexDirection: "column",
   },
+  home: {
+    display: "flex",
+    flex: 1,
+    justifyContent: "space-around",
+    alignItems: "center",
+    flexWrap: "wrap",
+  },
+  card: {
+    width: 200,
+    height: 200,
+    margin: 50,
+    alignItems: "center",
+    display: "flex",
+    justifyContent: "space-around",
+    flexDirection: "column",
+  },
+  cardMedia: {
+    width: 120,
+    height: 120,
+  },
+  icon: {
+    fontSize: 18,
+    cursor: "pointer",
+  },
 }));
