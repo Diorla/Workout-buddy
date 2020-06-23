@@ -1,9 +1,11 @@
 //@ts-check
 import React from "react";
 import { connect } from "react-redux";
+import useStyles from "../components/useStyles";
 
 const TitleBar = (props) => {
-  return <main>This is titlebar</main>;
+  const classes = useStyles();
+  return <main className={classes.titlebar}>This is titlebar</main>;
 };
 
 const mapStateToProps = (state) => ({

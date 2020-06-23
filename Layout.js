@@ -7,12 +7,14 @@ import StatusBar from "./sections/StatusBar";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { lightTheme, darkTheme } from "./themeMode";
 import { connect } from "react-redux";
+import useStyles from "./components/useStyles";
 
 const Layout = (props) => {
+  const classes = useStyles();
   const isDark = Math.random() > 0.5;
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
-      <main>
+      <main className={classes.root}>
         <CssBaseline />
         <TitleBar />
         <Browser />

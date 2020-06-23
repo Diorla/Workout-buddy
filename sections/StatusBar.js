@@ -1,9 +1,11 @@
 //@ts-check
 import React from "react";
 import { connect } from "react-redux";
+import useStyles from "../components/useStyles";
 
 const StatusBar = (props) => {
-  return <main>This is status bar</main>;
+  const classes = useStyles();
+  return <main className={classes.statusbar}>This is status bar</main>;
 };
 
 const mapStateToProps = (state) => ({
